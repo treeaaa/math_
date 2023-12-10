@@ -5,10 +5,12 @@ Proof. Let A be an  $n * m$ matrix and B be an $m * n$ matrix over C.Show that $
 $$C_{n}(A - ABA)=A$$
 $$C_{n}(AI_{m} - ABA)=A$$
 $$C_{n}A(I_{m} - BA)=A$$
-然後我需要讓等式的右邊變成 $I_{m}$, A 是一個non-square matrix，所以不能乘上 $A^{-1}$ , 而是要乘上 $A^{T}$
-$$A^{T}C_{n}A(I_{m} - BA)=A^{T}A$$
-$$(A^{T}A)^{-1}A^{T}C_{n}A(I_{m} - BA)=(A^{T}A)^{-1}A^{T}A$$
-$$(A^{T}A)^{-1}A^{T}C_{n}A(I_{m} - BA)=I_{m}$$
-$$((A^{T}A)^{-1}A^{T}C_{n}A)(I_{m} - BA)=I_{m}$$
+然後我需要讓等式的右邊變成 $I_{m}$, A 是一個non-square matrix，所以不能乘上 $A^{-1}$ , 而是要乘上 $B$
+$$BC_{n}A(I_{m} - BA)=BA$$
+$$I_{m} + BC_{n}A(I_{m} - BA)=I_{m} +BA$$
+$$I_{m} - BA + BC_{n}A(I_{m} - BA)=I_{m} $$
+$$I_{m}(I_{m} - BA) + BC_{n}A(I_{m} - BA)=I_{m} $$
+$$(I_{m}+ BC_{n}A)(I_{m} - BA)=I_{m} $$
 
-這樣就把 $I_{m} - BA$的反矩陣湊出來了 $((A^{T}A)^{-1}A^{T}C_{n}A)$
+
+這樣就把 $I_{m} - BA$的反矩陣湊出來了 $(I_{m}+ BC_{n}A)$
